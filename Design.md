@@ -11,6 +11,7 @@ If the extension is loaded for a page, it create a Context Menu action to perfor
 Optionally, this action will open a popup which displays each step and the process, so the user knows when to move on.
 
 Hentai Foundry:
+
 - Verify the image is not a thumbnail, if so navigate to the expanded image.
 - Download the image.
 - Click the "Thumbs Up" Button
@@ -55,7 +56,6 @@ I should consider adding a schema for galleries, meaning collections of images o
 
 I would like to have the capacity to selectively save certain pages, since I often do not need the whole thing.
 
-
 ## WebApp
 
 For administrative actions, the Backend serves a React based WebApp.
@@ -76,7 +76,6 @@ The App has CRUD operations on Managed Tags/Characters
 
 App has a gallary page for viewing all Media with metadata. Gallary can be filtered for various tag combinations.
 
-
 ## Tooling
 
 Shisho could use a host of CLI tools for use offline for processing/querying the data in the database, or syncing the status with thirdparty providers.
@@ -88,5 +87,15 @@ Reconciliation tool obviously.
 Dedupping tool - Scans images for similar images. When it finds matching sets, present them to the user so they can select which one to keep based on Quality, amount of metadata, and attribution.
 
 Archive management - It will be a bit wasteful to constantly zip and un-zip the entire corpus, especially once it gets larger. It would be better to divide the corpus into smaller archives which can be zipped individually, record in the database which archive the image exists in.
-  Possibly even only unzip the database file itself when harvesting, as the rest isn't necessary.
-  Shard the corpus based on last accessed time, so each shard works like tiered storage classes.
+Possibly even only unzip the database file itself when harvesting, as the rest isn't necessary.
+Shard the corpus based on last accessed time, so each shard works like tiered storage classes.
+
+## PornHub Gifs
+
+In general, videos on PH are very large (>500mb) and not worth downloading in their entirity.
+
+However, PH has a "Make a GIF" [tool](https://www.pornhub.com/gifgenerator) they [introduced](https://www.pornhub.com/blog/1811) in 2005. This lets you slice out a 1-10 second segment from any video on PH. These Gifs are uploaded on PH and reference the original video, other metadata, and the creator.
+
+There is a background job which will convert the `.gif` to `.webm`. The `.webm` files are MUCH smaller (2% the size of the `.gif`). This feature does not seem to be well supported. Originally, they wanted users to add their generated Gifs to a photo album they provided. However, that is not longer possible (albums are only user uploaded content). Instead they want you to "Post to your Stream" which always fails in my case. Additionally, there appears to be no indexed way to see all of the `gif`s you have created, or any listing of `favorited` `gif`s.
+
+They provide a hosting link for both versions, so it may be possible to save the `.webm` file, and create a gallery page to display all my favorite PH hosted `.webm`s. This way we can record a meta data media record in the Shisho database for PH Gifs as a way to record them.
