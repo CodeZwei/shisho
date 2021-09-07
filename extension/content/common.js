@@ -13,6 +13,7 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
 
     case 'prompt':
       alert(message.prompt);
+      break;
 
     default:
       break;
