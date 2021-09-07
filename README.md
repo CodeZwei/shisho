@@ -1,4 +1,5 @@
 # Shisho
+
 Chrome Extension for saving and recording metadata about hentai images.
 
 Adds a single button command to download a hentai image from Hentai Foundry, Danboruu, or webmshare as well as performing any bookkeeping for that site.

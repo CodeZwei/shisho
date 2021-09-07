@@ -8,7 +8,7 @@ Also specify the download directory on the local system. Using a directory choos
 
 If the extension is loaded for a page, it create a Context Menu action to perform the archive / download.
 
-Optionally, this action will open a popup which displays each step and the process, so the user knows when to move on.
+Optionally, this action will open a popup which displays each step of the process, so the user knows when to move on.
 
 Hentai Foundry:
 
@@ -35,7 +35,7 @@ All saved media should be recorded with a Media record in the manifest.
   location: 'physical disk location',
   characters: ['Bayonetta'],
   tags: ['acts', 'genre', 'category', 'features'],
-  recorded: '2004
+  recorded: '2004'
   reconcilled: false,
 }
 ```
@@ -46,7 +46,7 @@ I need to think about if `artist` requires a full schema of its own.
 
 `Location` is the hard disk I have the media saved. Not sure exactly how I will be distributing the media, so this might not be necessary if there is only one repository.
 
-`Characters` is the media characters featured in the media. Might not always be true.
+`Characters` is the media characters featured in the media. Might not always be populated depending on the source.
 
 `Tags` is a collection of strings to represent the various features of the media. These could be genres, categories, specific acts depicted, specific features (`vampire`, etc). Hopefully these can be auto-populated from the source.
 
@@ -80,7 +80,7 @@ App has a gallary page for viewing all Media with metadata. Gallary can be filte
 
 Shisho could use a host of CLI tools for use offline for processing/querying the data in the database, or syncing the status with thirdparty providers.
 
-Obvious ideas would be to take a set of already downloaded images, process their names, and search for them on thirdparty sites, to build a record. This would help initial ingestion of existing corpus.
+Obvious ideas would be to take a set of already downloaded images, process their names, and search for them on thirdparty sites, to build a record. This would help initial ingestion of an existing corpus.
 
 Reconciliation tool obviously.
 
