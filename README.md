@@ -6,7 +6,7 @@ Adds a single button command to download a hentai image from Hentai Foundry, Dan
 
 It will upvote the image, save a favorite, and log some metadata about the image such as download date, author/artist, and source.
 
-## KnownIssues
+## Known Issues
 
 `Download and Archive` will fail on Pixiv. It will record the necessary information but will fail to download the image. For now, manually save it at the same time.
 
