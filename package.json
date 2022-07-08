@@ -1,5 +1,5 @@
 {
-  "name": "@brisberg/shisho",
+  "name": "@codezwei/shisho",
   "version": "0.1.0",
   "description": "Erotic Media Organizer",
   "main": "server.js",
@@ -10,14 +10,14 @@
     "react",
     "sqlite"
   ],
-  "author": "brisberg <brandon.risberg@gmail.com>",
+  "author": "CodeZwei <brandonzwei@gmail.com>",
   "license": "MIT",
   "private": true,
-  "repository": "https://github.com/brisberg/shisho.git",
+  "repository": "https://github.com/CodeZwei/shisho.git",
   "bugs": {
-    "url": "https://github.com/brisberg/shisho/issues"
+    "url": "https://github.com/CodeZwei/shisho/issues"
   },
-  "homepage": "https://github.com/brisberg/shisho#readme",
+  "homepage": "https://github.com/CodeZwei/shisho#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
