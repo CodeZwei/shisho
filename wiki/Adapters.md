@@ -14,7 +14,7 @@ Repeat Voting and Adding to Favorites will trigger a javascript Alert(). These i
 
 ## PornHub Gifs
 
-In general, videos on PH are very large (>500mb) and not worth downloading in their entirity.
+In general, videos on PH are very large (>500mb) and not worth downloading in their entirety.
 
 However, PH has a "Make a GIF" [tool](https://www.pornhub.com/gifgenerator) they [introduced](https://www.pornhub.com/blog/1811) in 2005. This lets you slice out a 1-10 second segment from any video on PH. These Gifs are uploaded on PH and reference the original video, other metadata, and the creator.
 
